@@ -9,7 +9,7 @@ private:
 public:
     Hero()
     {
-        cout << "Constructor" << endl;
+        cout << "Default Constructor Called" << endl;
     }
 
     int getHealth()
@@ -28,6 +28,10 @@ public:
         this->health = health;
         cout << "this -> " << this << endl;
     }
+    ~Hero()
+    {
+        cout << "Destructor Called" << endl;
+    }
 };
 
 int main()
@@ -38,4 +42,11 @@ int main()
     cout << &h1 << endl;
     h1.getHealth();
     cout << "Bye" << endl;
+
+    Hero h2(4);
+    // copy constructor
+    Hero h3(h2);
+    // h2.health=h3.health
+    Hero *h4 = new Hero;
+    delete h4;
 }
