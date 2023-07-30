@@ -5,7 +5,15 @@ using namespace std;
 class Hero
 {
     // properties
+
+public:
     int health;
+    char level;
+
+    void print()
+    {
+        cout << level << endl;
+    }
 };
 class Hero2
 {
@@ -18,7 +26,8 @@ int main()
     Hero h1;
     Hero2 h2;
     Hero3 h3;
-    cout << "Size of h1 : " << sizeof(h1) << endl;
+    cout << "Size of h1 health : " << sizeof(h1.health) << endl;
+    cout << "Size of h1 level : " << sizeof(h1.level) << endl;
     cout << "Size of h2 : " << sizeof(h2) << endl;
     cout << "Size of h3 : " << sizeof(h3) << endl;
 }
