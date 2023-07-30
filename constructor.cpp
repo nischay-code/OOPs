@@ -7,6 +7,7 @@ private:
     int health;
 
 public:
+    static int timeToComplete;
     Hero()
     {
         cout << "Default Constructor Called" << endl;
@@ -34,10 +35,13 @@ public:
     }
 };
 
+int Hero::timeToComplete = 5;
+
 int main()
 {
-    cout << "Hi" << endl;
+
     // creation of object
+    cout << Hero::timeToComplete << endl;
     Hero h1(8);
     cout << &h1 << endl;
     h1.getHealth();
@@ -48,5 +52,6 @@ int main()
     Hero h3(h2);
     // h2.health=h3.health
     Hero *h4 = new Hero;
+    // Manually Destructor Called
     delete h4;
 }
